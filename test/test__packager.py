@@ -11,8 +11,8 @@ if __package__ is None:
     import sys
     sys.path.append( os.path.dirname( os.path.dirname( os.path.abspath(__file__) ) ) )
 
-from utils.packager import Packager
-from utils.tempdirectory import TempDirectory
+from ..utils.packager import Packager
+from ..utils.tempdirectory import TempDirectory
 
 
 class PackagerTest(unittest.TestCase):

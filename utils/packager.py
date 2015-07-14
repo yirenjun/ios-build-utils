@@ -3,7 +3,7 @@ import os
 import shutil
 import subprocess
 
-from tempdirectory import TempDirectory
+from .tempdirectory import TempDirectory
 
 
 class Packager:

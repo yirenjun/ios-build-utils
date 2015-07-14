@@ -1,5 +1,5 @@
 
-from utils.packager import Packager
+from .utils.packager import Packager
 
 import os
 
