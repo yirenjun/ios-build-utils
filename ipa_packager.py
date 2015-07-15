@@ -45,8 +45,9 @@ class IpaPackager():
         return [ lib for lib in libs if lib.startswith("libswift") ]
 
     def __swift_libs_to_copy(self):
-
-        app_swift_libs = self.__filtered_swift_libs(os.listdir(self.frameworks_path))
+        app_swift_libs = self.__filtered_swift_libs(os.listdir(self.frameworks_path)) \
+            if os.path.exists(self.frameworks_path) and os.path.isdir(self.frameworks_path) \
+            else []
         os_swift_libs = self.__filtered_swift_libs(os.listdir(self.os_libs_path))
 
         # We only need the swift libraries in use by the app
